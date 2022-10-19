@@ -1,5 +1,5 @@
 function getData() {
-    const data = [{
+    return [{
         "adapterId": "https://vigoiks.no/fintlabs-no/utdanning/vurdering/skeleton/beta",
         "capabilityEntities": [
             {
@@ -24,7 +24,6 @@ function getData() {
         "lastSeen": 1656594665203,
         "considerHealthy": false
     }];
-    return data;
 }
 
 export default getData
