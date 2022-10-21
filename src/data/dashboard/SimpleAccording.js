@@ -5,12 +5,22 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import {Chip, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@mui/material";
+import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@mui/material";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const SimpleAccording = ({ dataArray }) => {
 
     console.log('jennifer',dataArray);
+
+
+    function formateDate (inDate) {
+        const event = new Date(inDate);
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        return event.toLocaleDateString(undefined, options);
+    }
+
+// expected output (varies according to local timezone and default locale): Thursday, December 20, 2012
+
 
     return (
         <div>
@@ -30,8 +40,9 @@ const SimpleAccording = ({ dataArray }) => {
                             <CheckCircleIcon color="error" />
                         }
                     </AccordionSummary>
-                    <AccordionDetails>
 
+                    <AccordionDetails>
+                            <Typography>Last seen: {formateDate(item.lastSeen)}</Typography>
                             <TableContainer>
                                 <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
                                     <TableHead>
