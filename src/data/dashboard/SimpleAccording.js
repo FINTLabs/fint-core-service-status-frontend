@@ -6,6 +6,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {Chip, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@mui/material";
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const SimpleAccording = ({ dataArray }) => {
 
@@ -24,9 +25,9 @@ const SimpleAccording = ({ dataArray }) => {
                     >
                         <Typography sx={{ width: '95%', flexShrink: 0 }}>{item.adapterId}</Typography>
                         {item.considerHealthy ?
-                            <Chip label="Health" color="primary" />
+                            <CheckCircleIcon color="primary" />
                         :
-                            <Chip label="Health" color="error" />
+                            <CheckCircleIcon color="error" />
                         }
                     </AccordionSummary>
                     <AccordionDetails>
