@@ -62,10 +62,8 @@ const theme = createTheme({
 function App() {
 
     // TODO: Data needs to be put in the state and only retrieved once.
-
     const [data, setData] = useState(getData);
     // const data = fetchApi();
-    console.log('jennifera', data);
 
   return (
       <>

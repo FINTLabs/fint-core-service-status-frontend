@@ -38,7 +38,7 @@ const SimpleAccording = ({ dataArray }) => {
                         }
                     </AccordionSummary>
 
-                    <AccordionDetails>
+                    <AccordionDetails sx={{backgroundColor: '#eeeee4'}}>
                             <Typography>Last seen: {formateDate(item.lastSeen)}</Typography>
                             <TableContainer>
                                 <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
