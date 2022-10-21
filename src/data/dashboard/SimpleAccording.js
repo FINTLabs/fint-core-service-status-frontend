@@ -10,17 +10,14 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const SimpleAccording = ({ dataArray }) => {
 
+    //TODO: remove debug code
     console.log('jennifer',dataArray);
-
 
     function formateDate (inDate) {
         const event = new Date(inDate);
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         return event.toLocaleDateString(undefined, options);
     }
-
-// expected output (varies according to local timezone and default locale): Thursday, December 20, 2012
-
 
     return (
         <div>
